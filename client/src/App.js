@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Creatures from './components/Creatures'
-import SingleCreature from './components/SingleCreature'
+import Home from './components/Home'
+
 
 class App extends Component {
   render () {
@@ -9,8 +9,8 @@ class App extends Component {
       <Router>
         <div>
           <Switch>
-            <Route exact path="/" component={Creatures}/>
-            <Route path="/:creatureId" component={SingleCreature}/>
+            <Route exact path="/" component={Home}/>
+            {/* <Route path="/:creatureId" component={SingleCreature}/> */}
           </Switch>
         </div>
       </Router>

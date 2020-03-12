@@ -36,3 +36,7 @@ categoryRouter.delete('/:categoryId', (req, res) => {
         res.status(200).end();
     });
 });
+
+module.exports = {
+    categoryRouter
+  }

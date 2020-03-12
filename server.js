@@ -16,7 +16,12 @@ const app = express()
  * import routers from controllers/
  *
  */
-const { templateRouter } = require('./controllers/template.js')
+const { homeRouter } = require('./controllers/home.js')
+
+const { categoryRouter } = require('./controllers/category.js')
+
+const { tableRouter } = require('./controllers/table.js')
+
 
 
 /* Step 3
@@ -49,7 +54,13 @@ app.use(express.static(`${__dirname}/client/build`))
  * add router for the application to use. The first argument is a prefix to all
  * the paths defined in the router.
  */
-app.use('/api/helloworld', templateRouter)
+app.use('/api/home', homeRouter)
+
+app.use('/api/category', categoryRouter)
+
+ app.use('/api/table', tableRouter)
+
+
 
 /* Step 5
  *

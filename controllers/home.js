@@ -32,7 +32,7 @@ homeRouter.put('/:homeId', (req, res) => {
     });
 });
 
-homeRouter.delete('/:homeeId', (req, res) => {
+homeRouter.delete('/:homeId', (req, res) => {
     Homee.findByIdAndDelete(req.params.homeId).then(() => {
         res.status(200).end();
     });

@@ -36,3 +36,7 @@ tableRouter.delete('/:tableId', (req, res) => {
         res.status(200).end();
     });
 });
+
+module.exports = {
+    tableRouter
+  }

@@ -1,12 +1,19 @@
 
-const mongoose = require('./connection.js')
-
-
 const Other = new mongoose.Schema({
     name: String,
-    count: Number,
+    amount: Number,
     description: String
 })
 
+const Utilities = mongoose.model('Utilities', Other)
 
-module.exports = mongoose.model('Other', Other);
+const Rent = mongoose.model('Rent', Other)
+
+
+
+module.exports = {
+    Utilities,
+    Rent,
+    
+
+}

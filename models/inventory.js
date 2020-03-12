@@ -12,7 +12,7 @@ const Food = mongoose.model('Food', Inventory)
 
 const Cleaning = mongoose.model('Cleaning', Inventory)
 
-const Other = mongoose.model('Other', Inventory)
+const Other = mongoose.model('Misc', Inventory)
 
 
 

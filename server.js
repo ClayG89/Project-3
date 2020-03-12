@@ -16,11 +16,11 @@ const app = express()
  * import routers from controllers/
  *
  */
-const { inventoryRouter } = require('./controllers/inventory.js')
+const { foodRouter } = require('./controllers/inventory')
 
-const { personnelRouter } = require('./controllers/personnel.js')
+const { cleaningRouter } = require('./controllers/inventory')
 
-const { otherRouter } = require('./controllers/other.js')
+const { miscRouter } = require('./controllers/inventory')
 
 
 
@@ -54,11 +54,11 @@ app.use(express.static(`${__dirname}/client/build`))
  * add router for the application to use. The first argument is a prefix to all
  * the paths defined in the router.
  */
-app.use('/api/inventory', inventoryRouter)
+app.use('/api/food', foodRouter)
 
-app.use('/api/personnel', personnelRouter)
+app.use('/api/cleaning', cleaningRouter)
 
- app.use('/api/other', otherRouter)
+ app.use('/api/misc', miscRouter)
 
 
 

@@ -1,6 +1,6 @@
 const express = require('express')
 
-const Food = require('../models/Food.js/index.js')
+const Food = require('../models/Inventory')
 
 
 const foodRouter = express.Router()
@@ -40,7 +40,7 @@ foodRouter.delete('/:foodId', (req, res) => {
 
 
 
-const Cleaning = require('../models/Cleaning.js/index.js.')
+const Cleaning = require('../models/Inventory')
 
 
 const cleaningRouter = express.Router()
@@ -79,39 +79,39 @@ cleaningRouter.delete('/:cleaningId', (req, res) => {
 
 
 
-const Other = require('../models/Other.js/index.js.')
+const Misc = require('../models/Inventory')
 
 
-const otherRouter = express.Router()
+const miscRouter = express.Router()
 
 
 
-otherRouter.get('/', (req, res) => {
-    Other.find().then((others) => {
-        res.json(others);
+miscRouter.get('/', (req, res) => {
+    Misc.find().then((miscs) => {
+        res.json(miscs);
     });
 });
 
-otherRouter.get('/:otherId', (req, res) => {
-    Other.findById(req.params.otherId).then((other) => {
-        res.json(other);
+miscRouter.get('/:miscId', (req, res) => {
+    Misc.findById(req.params.miscId).then((misc) => {
+        res.json(misc);
     });
 });
 
-otherRouter.post('/', (req, res) => {
-    Other.create(req.body).then(() => {
+miscRouter.post('/', (req, res) => {
+    Misc.create(req.body).then(() => {
         res.status(200).end();
     });
 });
 
-otherRouter.put('/:otherId', (req, res) => {
-    Other.findByIdAndUpdate(req.params.otherId, req.body).then(() => {
+miscRouter.put('/:miscId', (req, res) => {
+    Misc.findByIdAndUpdate(req.params.miscId, req.body).then(() => {
         res.status(200).end();
     });
 });
 
-otherRouter.delete('/:otherId', (req, res) => {
-    Other.findByIdAndDelete(req.params.otherId).then(() => {
+miscRouter.delete('/:miscId', (req, res) => {
+    Misc.findByIdAndDelete(req.params.miscId).then(() => {
         res.status(200).end();
     });
 });
@@ -120,5 +120,5 @@ otherRouter.delete('/:otherId', (req, res) => {
 module.exports = {
     foodRouter,
     cleaningRouter,
-    otherRouter,
+    miscRouter,
   }

@@ -8,5 +8,21 @@ const Personnel = new mongoose.Schema({
     description: String
 })
 
+const Payroll = mongoose.model('Payroll', Personnel)
 
-module.exports = mongoose.model('Personnel', Personnel);
+const Vacation = mongoose.model('Vacation', Personnel)
+
+const Benifits = mongoose.model('Benifis', Personnel)
+
+
+
+
+
+
+
+module.exports = {
+    Payroll,
+    Vacation,
+    Benifis,
+
+}

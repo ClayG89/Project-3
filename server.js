@@ -22,7 +22,15 @@ const { cleaningRouter } = require('./controllers/inventory')
 
 const { miscRouter } = require('./controllers/inventory')
 
+const { payrollRouter } = require('./controllers/personnel')
 
+const { vacationRouter } = require('./controllers/personnel')
+
+const { benefitRouter } = require('./controllers/personnel')
+
+const { utilityRouter } = require('./controllers/other')
+
+const { rentRouter } = require('./controllers/other')
 
 /* Step 3
  *
@@ -58,9 +66,17 @@ app.use('/api/food', foodRouter)
 
 app.use('/api/cleaning', cleaningRouter)
 
- app.use('/api/misc', miscRouter)
+app.use('/api/misc', miscRouter)
 
+app.use('/api/payroll', payrollRouter)
 
+app.use('/api/vacation', vacationRouter)
+
+app.use('/api/benefit', benefitRouter)
+
+app.use('/api/utility', utilityRouter)
+
+app.use('/api/rent', rentRouter)
 
 /* Step 5
  *

@@ -12,7 +12,7 @@ const Payroll = mongoose.model('Payroll', Personnel)
 
 const Vacation = mongoose.model('Vacation', Personnel)
 
-const Benifits = mongoose.model('Benifis', Personnel)
+const Benefit = mongoose.model('Benefit', Personnel)
 
 
 
@@ -23,6 +23,6 @@ const Benifits = mongoose.model('Benifis', Personnel)
 module.exports = {
     Payroll,
     Vacation,
-    Benifis,
+    Benefit,
 
 }

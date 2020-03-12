@@ -1,42 +1,124 @@
 const express = require('express')
 
-const Inventory = require('../models/Inventory.js')
+const Food = require('../models/Food.js/index.js')
 
 
-const inventoryRouter = express.Router()
+const foodRouter = express.Router()
 
 
 
-inventoryRouter.get('/', (req, res) => {
-    Inventory.find().then((inventories) => {
-        res.json(inventories);
+foodRouter.get('/', (req, res) => {
+    Food.find().then((foods) => {
+        res.json(foods);
     });
 });
 
-inventoryRouter.get('/:categoryId', (req, res) => {
-    Inventory.findById(req.params.inventoryId).then((inventory) => {
-        res.json(inventory);
+foodRouter.get('/:foodId', (req, res) => {
+    Food.findById(req.params.foodId).then((food) => {
+        res.json(food);
     });
 });
 
-inventoryRouter.post('/', (req, res) => {
-    Inventory.create(req.body).then(() => {
+foodRouter.post('/', (req, res) => {
+    Food.create(req.body).then(() => {
         res.status(200).end();
     });
 });
 
-inventoryRouter.put('/:inventoryId', (req, res) => {
-    Inventory.findByIdAndUpdate(req.params.inventoryId, req.body).then(() => {
+foodRouter.put('/:foodId', (req, res) => {
+    Food.findByIdAndUpdate(req.params.foodId, req.body).then(() => {
         res.status(200).end();
     });
 });
 
-inventoryRouter.delete('/:inventoryId', (req, res) => {
-    Inventory.findByIdAndDelete(req.params.inventoryId).then(() => {
+foodRouter.delete('/:foodId', (req, res) => {
+    Food.findByIdAndDelete(req.params.foodId).then(() => {
         res.status(200).end();
     });
 });
+
+
+
+
+const Cleaning = require('../models/Cleaning.js/index.js.')
+
+
+const cleaningRouter = express.Router()
+
+
+
+cleaningRouter.get('/', (req, res) => {
+    Cleaning.find().then((cleanings) => {
+        res.json(cleanings);
+    });
+});
+
+cleaningRouter.get('/:cleaningId', (req, res) => {
+    Cleaning.findById(req.params.cleaningId).then((cleaning) => {
+        res.json(cleaning);
+    });
+});
+
+cleaningRouter.post('/', (req, res) => {
+    Cleaning.create(req.body).then(() => {
+        res.status(200).end();
+    });
+});
+
+cleaningRouter.put('/:cleaningId', (req, res) => {
+    Cleaning.findByIdAndUpdate(req.params.cleaningId, req.body).then(() => {
+        res.status(200).end();
+    });
+});
+
+cleaningRouter.delete('/:cleaningId', (req, res) => {
+    Cleaning.findByIdAndDelete(req.params.cleaningId).then(() => {
+        res.status(200).end();
+    });
+});
+
+
+
+const Other = require('../models/Other.js/index.js.')
+
+
+const otherRouter = express.Router()
+
+
+
+otherRouter.get('/', (req, res) => {
+    Other.find().then((others) => {
+        res.json(others);
+    });
+});
+
+otherRouter.get('/:otherId', (req, res) => {
+    Other.findById(req.params.otherId).then((other) => {
+        res.json(other);
+    });
+});
+
+otherRouter.post('/', (req, res) => {
+    Other.create(req.body).then(() => {
+        res.status(200).end();
+    });
+});
+
+otherRouter.put('/:otherId', (req, res) => {
+    Other.findByIdAndUpdate(req.params.otherId, req.body).then(() => {
+        res.status(200).end();
+    });
+});
+
+otherRouter.delete('/:otherId', (req, res) => {
+    Other.findByIdAndDelete(req.params.otherId).then(() => {
+        res.status(200).end();
+    });
+});
+
 
 module.exports = {
-    inventoryRouter
+    foodRouter,
+    cleaningRouter,
+    otherRouter,
   }

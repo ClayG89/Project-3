@@ -14,6 +14,9 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Inventory}/>
             {/* <Route path="/:creatureId" component={SingleCreature}/> */}
+            <Route exact path="/" component={Personnel}/>
+
+            <Route exact path="/" component={Other}/>
           </Switch>
         </div>
       </Router>

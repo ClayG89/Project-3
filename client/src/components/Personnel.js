@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 
-export default class Home extends Component {
+export default class Personnel extends Component {
     state = {
         
     }
     render() {
         return (
             <div>
-               Home Works 
+               Personnel Works 
             </div>
         )
     }

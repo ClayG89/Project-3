@@ -8,5 +8,21 @@ const Inventory = new mongoose.Schema({
     description: String
 })
 
+const Food = mongoose.model('Food', Inventory)
 
-module.exports = mongoose.model('Inventory', Inventory);
+const Cleaning = mongoose.model('Cleaning', Inventory)
+
+const Other = mongoose.model('Other', Inventory)
+
+
+
+
+
+
+
+module.exports = {
+    Food,
+    Cleaning,
+    Other,
+
+}

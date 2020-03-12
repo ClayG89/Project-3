@@ -16,11 +16,11 @@ const app = express()
  * import routers from controllers/
  *
  */
-const { inventoryRouter } = require('./controllers/other.js/index.js')
+const { inventoryRouter } = require('./controllers/inventory.js')
 
-const { personnelRouter } = require('./controllers/inventory.js/index.js')
+const { personnelRouter } = require('./controllers/personnel.js')
 
-const { otherRouter } = require('./controllers/personnel.js/index.js')
+const { otherRouter } = require('./controllers/other.js')
 
 
 

@@ -2,11 +2,11 @@
 const mongoose = require('./connection.js')
 
 
-const Category = new mongoose.Schema({
+const Other = new mongoose.Schema({
     name: String,
     count: Number,
     description: String
 })
 
 
-module.exports = mongoose.model('Category', Category);
+module.exports = mongoose.model('Other', Other);

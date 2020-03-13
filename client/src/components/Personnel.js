@@ -18,19 +18,19 @@ getPayroll = () => {
         })
     })
 }
-getCleaning = () => {
-    axios.get('/api/cleaning').then((response) => {
-        const foundCleaning= response.data;
+getVacation = () => {
+    axios.get('/api/vacation').then((response) => {
+        const foundVacation= response.data;
         this.setState({
-    cleaning: foundCleaning
+    vacation: foundVacation
         })
     })
 }
-getMisc = () => {
-    axios.get('/api/misc').then((response) => {
-        const foundMisc = response.data;
+getBenefit = () => {
+    axios.get('/api/benefit').then((response) => {
+        const foundBenefit = response.data;
         this.setState({
-            misc: foundMisc 
+            benefit: foundBenefit
         })
     })
 }
@@ -41,51 +41,51 @@ toggleCreateForm = () => {
     });
 }
 changeInput = (event) => {
-    const updatedNewFood = { ...this.state.newFood};
-    updatedNewFood[event.target.name] = event.target.value;
+    const updatedNewPayroll = { ...this.state.newPayroll};
+    updatedNewPayroll[event.target.name] = event.target.value;
     this.setState({
-        newFood: updatedNewFood,
+        newPayroll: updatedNewPayroll,
     });
 }
 changeInput = (event) => {
-    const updatedNewCleaning = { ...this.state.newCleaning};
-    updatedNewCleaning[event.target.name] = event.target.value;
+    const updatedNewVacation = { ...this.state.newVacation};
+    updatedNewVacation[event.target.name] = event.target.value;
     this.setState({
-        newCleaning: updatedNewCleaning,
+        newVacation: updatedNewVacation,
     });
 }
 changeInput = (event) => {
-    const updatedNewMisc = { ...this.state.newMisc};
-    updatedNewMisc[event.target.name] = event.target.value;
+    const updatedNewBenefits = { ...this.state.newBenefits};
+    updatedNewBenefits[event.target.name] = event.target.value;
     this.setState({
-        newMisc: updatedNewMisc,
+        newBenefits: updatedNewBenefits,
     });
 }
 submitCreateForm = (event) => {
     event.preventDefault();
-    axios.post('/api/foods', this.state.newFood).then(() => {
+    axios.post('/api/payroll', this.state.newPayroll).then(() => {
         this.toggleCreateForm();
-        this.getFoods();
+        this.getPayroll();
     });
 }
 submitCreateForm = (event) => {
     event.preventDefault();
-    axios.post('/api/cleaning', this.state.newCleaning).then(() => {
+    axios.post('/api/vacation', this.state.newVacation).then(() => {
         this.toggleCreateForm();
-        this.getCleanings();
+        this.getVacation();
     });
 }
 submitCreateForm = (event) => {
     event.preventDefault();
-    axios.post('/api/miscs', this.state.newMisc).then(() => {
+    axios.post('/api/benefit', this.state.newBenefits).then(() => {
         this.toggleCreateForm();
-        this.getMiscs();
+        this.getBenefit();
     });
 }
 componentDidMount() {
-    this.getFoods()
-    this.getCleaning()
-    this.getMisc()
+    this.getPayroll()
+    this.getVacation()
+    this.getBenefit()
 }
 
 
@@ -95,24 +95,24 @@ componentDidMount() {
             <div>
                 <div>
                 {
-                    this.state.food.map((food, i) => {
-                        return <Food food={ food } key={ i }/>;
+                    this.state.payroll.map((payroll, i) => {
+                        return <Payroll payroll={ payroll } key={ i }/>;
                         
                     })
                 }
                 </div>
                 <div>
                 {
-                    this.state.cleaning.map((cleaning, i) => {
-                        return <Cleaning cleaning={ cleaning } key={ i }/>;
+                    this.state.vacation.map((vacation, i) => {
+                        return <Vacation vacation={ vacation } key={ i }/>;
                         
                     })
                 }
                 </div>
                 <div>
                 {
-                    this.state.misc.map((misc, i) => {
-                        return <Misc misc={ misc } key={ i }/>;
+                    this.state.benefit.map((benefit, i) => {
+                        return <Benefit benefit={ benefit } key={ i }/>;
                         
                     })
                 }

@@ -1,6 +1,7 @@
 
 const mongoose = require('./connection.js')
 
+
 const Other = new mongoose.Schema({
     name: String,
     amount: Number,

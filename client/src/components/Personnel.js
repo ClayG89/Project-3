@@ -10,7 +10,7 @@ export default class Personnel extends Component {
     render() {
         return (
             <div>
-               Personnel Works 
+               Personnel works
             </div>
         )
     }

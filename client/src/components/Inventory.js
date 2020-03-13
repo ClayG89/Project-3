@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { Food } from './Food'
 
 export default class Inventory extends Component {
     state = {
@@ -93,7 +94,7 @@ componentDidMount() {
                 <div>
                 {
                     this.state.food.map((food, i) => {
-                        return <Result food={ food } key={ i }/>;
+                        return <Food food={ food } key={ i }/>;
                         
                     })
                 }
@@ -101,7 +102,7 @@ componentDidMount() {
                 <div>
                 {
                     this.state.cleaning.map((cleaning, i) => {
-                        return <Result cleaning={ cleaning } key={ i }/>;
+                        return <Cleaning cleaning={ cleaning } key={ i }/>;
                         
                     })
                 }
@@ -109,7 +110,7 @@ componentDidMount() {
                 <div>
                 {
                     this.state.misc.map((misc, i) => {
-                        return <Result food={ food } key={ i }/>;
+                        return <Misc misc={ misc } key={ i }/>;
                         
                     })
                 }

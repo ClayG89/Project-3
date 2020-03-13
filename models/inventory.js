@@ -12,7 +12,7 @@ const Food = mongoose.model('Food', Inventory)
 
 const Cleaning = mongoose.model('Cleaning', Inventory)
 
-const Other = mongoose.model('Misc', Inventory)
+const Misc = mongoose.model('Misc', Inventory)
 
 
 
@@ -23,6 +23,5 @@ const Other = mongoose.model('Misc', Inventory)
 module.exports = {
     Food,
     Cleaning,
-    Other,
-
+    Misc
 }

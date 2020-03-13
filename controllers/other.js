@@ -1,6 +1,6 @@
 const express = require('express')
 
-const Utility = require('../models/Other')
+const { Utility } = require('../models/Other')
 
 
 const utilityRouter = express.Router()
@@ -40,7 +40,7 @@ utilityRouter.delete('/:utilityId', (req, res) => {
 
 
 
-const Rent = require('../models/Other')
+const { Rent } = require('../models/Other')
 
 
 const rentRouter = express.Router()

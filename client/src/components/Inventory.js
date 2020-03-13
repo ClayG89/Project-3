@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { Food } from './Food'
+import Food  from './Food'
+import Cleaning from './Cleaning'
+import Misc from './Misc'
 
 export default class Inventory extends Component {
     state = {
@@ -12,22 +14,22 @@ getFoods = () => {
     axios.get('/api/foods').then((response) => {
         const foundFood = response.data;
         this.state({
-food: foundFood
+    food: foundFood
         })
     })
 }
 getCleaning = () => {
     axios.get('/api/cleaning').then((response) => {
         const foundCleaning= response.data;
-        this.state({
-cleaning: foundCleaning
+        this.setState({
+    cleaning: foundCleaning
         })
     })
 }
 getMisc = () => {
     axios.get('/api/misc').then((response) => {
         const foundMisc = response.data;
-        this.state({
+        this.setState({
             misc: foundMisc 
         })
     })

@@ -12,11 +12,11 @@ class App extends Component {
       <Router>
         <div>
           <Switch>
-            <Route exact path="/" component={Inventory}/>
-            {/* <Route path="/:creatureId" component={SingleCreature}/> */}
-            <Route exact path="/" component={Personnel}/>
+            <Route exact path="/inventory" component={Inventory}/>
+            
+            <Route exact path="/personnel" component={Personnel}/>
 
-            <Route exact path="/" component={Other}/>
+            <Route exact path="/other" component={Other}/>
           </Switch>
         </div>
       </Router>

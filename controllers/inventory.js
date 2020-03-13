@@ -1,6 +1,6 @@
 const express = require('express')
 
-const Food = require('../models/Inventory')
+const { Food } = require('../models/Inventory')
 
 
 const foodRouter = express.Router()
@@ -40,7 +40,7 @@ foodRouter.delete('/:foodId', (req, res) => {
 
 
 
-const Cleaning = require('../models/Inventory')
+const { Cleaning }= require('../models/Inventory')
 
 
 const cleaningRouter = express.Router()
@@ -79,7 +79,7 @@ cleaningRouter.delete('/:cleaningId', (req, res) => {
 
 
 
-const Misc = require('../models/Inventory')
+const { Misc } = require('../models/Inventory')
 
 
 const miscRouter = express.Router()

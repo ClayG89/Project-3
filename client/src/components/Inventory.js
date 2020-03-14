@@ -3,6 +3,7 @@ import axios from 'axios'
 import Food  from './Food'
 import Cleaning from './Cleaning'
 import Misc from './Misc'
+import { Link } from 'react-router-dom'
 
 export default class Inventory extends Component {
     state = {
@@ -93,8 +94,11 @@ componentDidMount() {
     render() {
         return (
             <div>
-                
+                <h1>Clay's Country Cookin</h1>
+                <h2>Inventory</h2>
+
                 <div>
+                    <Link to="/food">Food</Link>
                 {
                     this.state.food.map((food, i) => {
                         return <Food food={ food } key={ i }/>;
@@ -103,6 +107,7 @@ componentDidMount() {
                 }
                 </div>
                 <div>
+                <Link to="/cleaning">Cleaning</Link>
                 {
                     this.state.cleaning.map((cleaning, i) => {
                         return <Cleaning cleaning={ cleaning } key={ i }/>;
@@ -111,6 +116,7 @@ componentDidMount() {
                 }
                 </div>
                 <div>
+                <Link to="/misc">Misc</Link>
                 {
                     this.state.misc.map((misc, i) => {
                         return <Misc misc={ misc } key={ i }/>;

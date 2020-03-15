@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Utility  from './Utility'
 import Rent from './Rent'
+import { Link } from 'react-router-dom'
 
 
 export default class Other extends Component {
@@ -72,7 +73,10 @@ componentDidMount() {
     render() {
         return (
             <div>
+                 <h1>Clay's Country Cookin</h1>
+                <h2>Other Expenses</h2>
                 <div>
+                <Link to="/utility">Utilities</Link>
                 {
                     this.state.utility.map((utility, i) => {
                         return <Utility utility={ utility } key={ i }/>;
@@ -81,6 +85,7 @@ componentDidMount() {
                 }
                 </div>
                 <div>
+                <Link to="/Rent">Leases</Link>
                 {
                     this.state.rent.map((rent, i) => {
                         return <Rent rent={ rent } key={ i }/>;

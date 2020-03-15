@@ -4,6 +4,7 @@ import Personnel from './components/Personnel'
 import Other from './components/Other'
 import Inventory from './components/Inventory'
 import Home from './components/Home'
+import Food from './components/Food'
 import './App.css'
 
 
@@ -20,6 +21,8 @@ class App extends Component {
             <Route exact path="/personnel" component={Personnel}/>
 
             <Route exact path="/other" component={Other}/>
+
+            <Route exact path="/food" component={Food}/>
           </Switch>
         </div>
       </Router>

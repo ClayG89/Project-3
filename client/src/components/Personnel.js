@@ -3,6 +3,7 @@ import axios from 'axios'
 import Payroll  from './Payroll'
 import Vacation from './Vacation'
 import Benefit from './Benefit'
+import { Link } from 'react-router-dom'
 
 export default class Personnel extends Component {
     state = {
@@ -93,7 +94,10 @@ componentDidMount() {
     render() {
         return (
             <div>
+                <h1>Clay's Country Cookin</h1>
+                <h2>Personnel</h2>
                 <div>
+                <Link to="/payroll">Payroll</Link>
                 {
                     this.state.payroll.map((payroll, i) => {
                         return <Payroll payroll={ payroll } key={ i }/>;
@@ -102,6 +106,7 @@ componentDidMount() {
                 }
                 </div>
                 <div>
+                <Link to="/Vacation">Vacation</Link>
                 {
                     this.state.vacation.map((vacation, i) => {
                         return <Vacation vacation={ vacation } key={ i }/>;
@@ -110,6 +115,7 @@ componentDidMount() {
                 }
                 </div>
                 <div>
+                <Link to="/benefit">Benefits</Link>
                 {
                     this.state.benefit.map((benefit, i) => {
                         return <Benefit benefit={ benefit } key={ i }/>;

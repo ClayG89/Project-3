@@ -11,6 +11,8 @@ export default class Inventory extends Component {
             cleaning: [],
             misc:[]
       }
+
+      
 getFoods = () => {
     axios.get('/api/foods').then((response) => {
         const foundFood = response.data;
@@ -90,8 +92,9 @@ componentDidMount() {
 }
 
 
-
     render() {
+
+        const { name, count, description } = this.props.Food
         return (
             <div>
                 <h1>Clay's Country Cookin</h1>

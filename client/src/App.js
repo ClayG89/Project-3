@@ -5,6 +5,7 @@ import Other from './components/Other'
 import Inventory from './components/Inventory'
 import Home from './components/Home'
 import Food from './components/Food'
+
 import './App.css'
 
 

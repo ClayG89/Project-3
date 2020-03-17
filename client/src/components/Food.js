@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Inventory from './Inventory'
+import Table from './Table'
 
 // class foodFunction(getFoods, submitCreateForm, toggleCreateForm, changeInput)
 

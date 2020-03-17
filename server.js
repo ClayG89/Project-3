@@ -32,6 +32,8 @@ const { utilityRouter } = require('./controllers/other')
 
 const { rentRouter } = require('./controllers/other')
 
+const { tableRouter } = require('./controllers/inventory')
+
 /* Step 3
  *
  * Register middleware...
@@ -77,6 +79,8 @@ app.use('/api/benefit', benefitRouter)
 app.use('/api/utility', utilityRouter)
 
 app.use('/api/rent', rentRouter)
+
+app.use('/api/table', tableRouter)
 
 /* Step 5
  *

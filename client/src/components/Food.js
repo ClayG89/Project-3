@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Inventory from './Inventory'
 import Table from './Table'
+import Title from './Title'
 
 // class foodFunction(getFoods, submitCreateForm, toggleCreateForm, changeInput)
 
@@ -30,11 +31,11 @@ export default class Food extends Component {
        
         return (
             <div>
-                <h1>Clay's Country Cookin</h1>
+                <Title/>
 
                 <div className="foodName">
                     <h2>Name</h2>
-                    <p>{this.props.name}</p>
+                    <Table/>
                     <input type="text" name="name" onChange={ this.submitCreateForm }/>
                     <p>{this.submitCreateForm}</p>
                 </div>

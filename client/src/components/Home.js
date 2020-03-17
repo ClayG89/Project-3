@@ -7,7 +7,7 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-                <div>{ Title }</div>
+                <Title/>
 
                 <div><Link to="/Inventory">Inventory</Link></div>
 

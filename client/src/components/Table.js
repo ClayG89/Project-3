@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Food from './Food'
 
 export default class Table extends Component {
     render() {

@@ -27,25 +27,28 @@ export default class Cleaning extends Component {
     render() {
         return (
             <div>
-                <Title/>
+               <h1>Clay's Country Cookin</h1>
 
                 <div className="cleanerName">
                     <h2>Cleaning</h2>
                     <h3>Name</h3>
-                    <Table info={this.state.cleaning}/>
-                    <input type="text" name="name" onChange={ this.submitCreateForm }/>
-                    <p>{this.submitCreateForm}</p>
+                    <Table info={this.props.cleaning}/>
+                    <input type="text" name="name" onChange={ this.props.changeInputCleaning }/>
+                    {/* <p>{this.submitCreateForm}</p> */}
                 </div>
                 <div>
                     <h3>Count</h3>
-                    <input type="number" name="count" onChange={ this.changeInput }/>
+                    <input type="number" name="count" onChange={ this.props.changeInputFood }/>
                 </div>
                 <div>
                     <h3>Description</h3>
-                    <input type="text" name="description" onChange={ this.changeInput}/>
+                    <input type="text" name="description" onChange={ this.props.changeInputCleaning}/>
                 </div>
                 <div>
-                <button onClick={ this.submitNewProduct }>EDIT</button>
+                <button onClick={ this.props.submitCreateCleaning }>Add New</button>
+                </div>
+                <div>
+                    <button onClick={ this.props.changeInputCleaning }>Edit</button>
                 </div>
 
                            

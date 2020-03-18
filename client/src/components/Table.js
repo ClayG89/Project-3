@@ -13,16 +13,16 @@ export default class Table extends Component {
                            <td>DESCRIPTION</td>
                        </tr>
                    </th>
-                   {this.props.info.map((info) => {
-                       return (
+                   {/* {this.props.info.map((info) => {
+                       return ( */}
                            <tr>
-                            <td>{info.name}</td>
-                            <td>{info.count}</td>
-                            <td>{info.description}</td>    
+                            <td>{this.props.info.name}</td>
+                            <td>{this.props.info.count}</td>
+                            <td>{this.props.info.description}</td>    
                            </tr>
-                   )
+                   {/* ) */}
                        
-                   })}
+                   {/* })} */}
                 </table> 
             </div>
         )

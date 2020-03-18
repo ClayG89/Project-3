@@ -14,9 +14,9 @@ export default class Inventory extends Component {
 
       
 getFoods = () => {
-    axios.get('/api/foods').then((response) => {
+    axios.get('/api/food').then((response) => {
         const foundFood = response.data;
-        this.state({
+        this.setState({
     food: foundFood
         })
     })
@@ -43,42 +43,42 @@ toggleCreateForm = () => {
         showCreateForm: newShowCreateForm,
     });
 }
-changeInput = (event) => {
+changeInputFood = (event) => {
     const updatedNewFood = { ...this.state.newFood};
     updatedNewFood[event.target.name] = event.target.value;
     this.setState({
         newFood: updatedNewFood,
     });
 }
-changeInput = (event) => {
+changeInputCleaning = (event) => {
     const updatedNewCleaning = { ...this.state.newCleaning};
     updatedNewCleaning[event.target.name] = event.target.value;
     this.setState({
         newCleaning: updatedNewCleaning,
     });
 }
-changeInput = (event) => {
+changeInputMisc = (event) => {
     const updatedNewMisc = { ...this.state.newMisc};
     updatedNewMisc[event.target.name] = event.target.value;
     this.setState({
         newMisc: updatedNewMisc,
     });
 }
-submitCreateForm = (event) => {
+submitCreateFood = (event) => {
     event.preventDefault();
-    axios.post('/api/foods', this.state.newFood).then(() => {
+    axios.post('/api/food', this.state.newFood).then(() => {
         this.toggleCreateForm();
         this.getFoods();
     });
 }
-submitCreateForm = (event) => {
+submitCreateCleaning = (event) => {
     event.preventDefault();
     axios.post('/api/cleaning', this.state.newCleaning).then(() => {
         this.toggleCreateForm();
         this.getCleanings();
     });
 }
-submitCreateForm = (event) => {
+submitCreateMisc = (event) => {
     event.preventDefault();
     axios.post('/api/miscs', this.state.newMisc).then(() => {
         this.toggleCreateForm();
@@ -94,7 +94,7 @@ componentDidMount() {
 
     render() {
 
-        const { name, count, description } = this.props.Food
+        // const { name, count, description } = this.props.Food
         return (
             <div>
                 <h1>Clay's Country Cookin</h1>
@@ -104,17 +104,26 @@ componentDidMount() {
                     <Link to="/food">Food</Link>
                 {
                     this.state.food.map((food, i) => {
-                        return <Food food={ food } key={ i }/>;
-                        
+                        return (
+                        <Food food={ food } key={ i }
+                        submitCreateFood={this.submitCreateFood}
+                        changeInputFood={this.changeInputFood}/>
+
+                        )
                     })
                 }
+
                 </div>
                 <div>
                 <Link to="/cleaning">Cleaning</Link>
                 {
-                    this.state.cleaning.map((cleaning, i) => {
-                        return <Cleaning cleaning={ cleaning } key={ i }/>;
-                        
+                    this.state.food.map((cleaning, i) => {
+                        return (
+                        <Cleaning cleaning={ cleaning } key={ i }
+                        submitCreateCleaning={this.submitCreateCleaning}
+                        changeInputCleaning={this.changeInputCleaning}/>
+
+                        )
                     })
                 }
                 </div>

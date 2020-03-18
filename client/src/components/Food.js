@@ -26,30 +26,31 @@ export default class Food extends Component {
     }
     ],
 }
-
     render() {
-       
         return (
             <div>
-                <Title/>
+                <h1>Clay's Country Cookin</h1>
 
                 <div className="foodName">
                     <h2>Food</h2>
                     <h3>Name</h3>
-                    <Table info={this.state.food}/>
-                    <input type="text" name="name" onChange={ this.submitCreateForm }/>
+                    <Table info={this.props.food}/>
+                    <input type="text" name="name" onChange={ this.props.changeInputFood  }/>
                     {/* <p>{this.submitCreateForm}</p> */}
                 </div>
                 <div>
                     <h3>Count</h3>
-                    <input type="number" name="count" onChange={ this.changeInput }/>
+                    <input type="number" name="count" onChange={ this.props.changeInputFood  }/>
                 </div>
                 <div>
                     <h3>Description</h3>
-                    <input type="text" name="description" onChange={ this.changeInput}/>
+                    <input type="text" name="description" onChange={ this.props.changeInputFood }/>
                 </div>
                 <div>
-                <button onClick={ this.props.submitCreateForm }>Add New</button>
+                <button onClick={ this.props.submitCreateFood }>Add New</button>
+                </div>
+                <div>
+                    <button onClick={ this.props.changeInputFood }>Edit</button>
                 </div>
 
                            

@@ -80,7 +80,7 @@ app.use('/api/utility', utilityRouter)
 
 app.use('/api/rent', rentRouter)
 
-app.use('/api/table', tableRouter)
+// app.use('/api/table', tableRouter)
 
 /* Step 5
  *

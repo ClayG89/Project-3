@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Personnel from './components/Personnel'
 import Other from './components/Other'
+import Utility from './components/Utility'
+import Rent from './components/Rent'
 import Vacation from './components/Vacation'
 import Benefit from './components/Benefit'
 import Payroll from './components/Payroll'
@@ -40,6 +42,10 @@ class App extends Component {
             <Route exact path="/benefit" component={Benefit}/>
 
             <Route exact path="/payroll" component={Payroll}/>
+
+            <Route exact path="/utility" component={Utility}/>
+
+            <Route exact path="/rent" component={Rent}/>
 
           </Switch>
         </div>

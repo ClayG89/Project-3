@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Personnel from './components/Personnel'
 import Other from './components/Other'
 import Vacation from './components/Vacation'
+import Benefit from './components/Benefit'
+import Payroll from './components/Payroll'
 import Home from './components/Home'
 import Inventory from './components/Inventory'
 import Food from './components/Food'
@@ -34,6 +36,10 @@ class App extends Component {
             <Route exact path="/misc" component={Misc}/>
 
             <Route exact path="/vacation" component={Vacation}/>
+
+            <Route exact path="/benefit" component={Benefit}/>
+
+            <Route exact path="/payroll" component={Payroll}/>
 
           </Switch>
         </div>

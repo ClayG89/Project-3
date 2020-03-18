@@ -34,17 +34,18 @@ export default class Food extends Component {
                 <Title/>
 
                 <div className="foodName">
-                    <h2>Name</h2>
+                    <h2>Food</h2>
+                    <h3>Name</h3>
                     <Table info={this.state.food}/>
                     <input type="text" name="name" onChange={ this.submitCreateForm }/>
                     <p>{this.submitCreateForm}</p>
                 </div>
                 <div>
-                    <h2>Count</h2>
+                    <h3>Count</h3>
                     <input type="number" name="count" onChange={ this.changeInput }/>
                 </div>
                 <div>
-                    <h2>Description</h2>
+                    <h3>Description</h3>
                     <input type="text" name="description" onChange={ this.changeInput}/>
                 </div>
                 <div>

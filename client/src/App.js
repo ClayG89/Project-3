@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Personnel from './components/Personnel'
 import Other from './components/Other'
-import Inventory from './components/Inventory'
+import Vacation from './components/Vacation'
 import Home from './components/Home'
+import Inventory from './components/Inventory'
 import Food from './components/Food'
 import Cleaning from './components/Cleaning'
 import Misc from './components/Misc'
@@ -31,6 +32,9 @@ class App extends Component {
             <Route exact path="/cleaning" component={Cleaning}/>
 
             <Route exact path="/misc" component={Misc}/>
+
+            <Route exact path="/vacation" component={Vacation}/>
+
           </Switch>
         </div>
       </Router>

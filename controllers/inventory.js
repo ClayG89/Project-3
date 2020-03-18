@@ -40,7 +40,7 @@ foodRouter.delete('/:foodId', (req, res) => {
 
 
 
-const { Cleaning }= require('../models/Inventory')
+const { Cleaning } = require('../models/Inventory')
 
 
 const cleaningRouter = express.Router()

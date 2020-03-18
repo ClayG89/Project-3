@@ -6,6 +6,8 @@ import Inventory from './components/Inventory'
 import Home from './components/Home'
 import Food from './components/Food'
 import Cleaning from './components/Cleaning'
+import Misc from './components/Misc'
+
 
 import './App.css'
 
@@ -25,6 +27,10 @@ class App extends Component {
             <Route exact path="/other" component={Other}/>
 
             <Route exact path="/food" component={Food}/>
+
+            <Route exact path="/cleaning" component={Cleaning}/>
+
+            <Route exact path="/misc" component={Misc}/>
           </Switch>
         </div>
       </Router>

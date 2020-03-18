@@ -35,7 +35,7 @@ export default class Food extends Component {
 
                 <div className="foodName">
                     <h2>Name</h2>
-                    <Table/>
+                    <Table info={this.state.food}/>
                     <input type="text" name="name" onChange={ this.submitCreateForm }/>
                     <p>{this.submitCreateForm}</p>
                 </div>

@@ -1,6 +1,6 @@
 const express = require('express')
 
-const { Payroll } = require('../models/Personnel')
+const { Payroll } = require('../models/personnel')
 
 
 const payrollRouter = express.Router()
@@ -40,7 +40,7 @@ payrollRouter.delete('/:payollId', (req, res) => {
 
 
 
-const { Vacation } = require('../models/Personnel')
+const { Vacation } = require('../models/personnel')
 
 
 const vacationRouter = express.Router()
@@ -79,7 +79,7 @@ vacationRouter.delete('/:vacationId', (req, res) => {
 
 
 
-const { Benefit } = require('../models/Personnel')
+const { Benefit } = require('../models/personnel')
 
 
 const benefitRouter = express.Router()

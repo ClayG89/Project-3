@@ -20,4 +20,4 @@ Project 3 WireFrame
 
 Project 3 ERD
 
-Screenshot(https://git.generalassemb.ly/clayGue69/project-3/blob/master/Project-3-ERD.png?raw=true)
+[Screenshot](https://git.generalassemb.ly/clayGue69/project-3/blob/master/Project-3-ERD.png?raw=true)

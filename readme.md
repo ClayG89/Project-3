@@ -16,7 +16,7 @@ https://dashboard.heroku.com/apps/claysproject3
 
 Project 3 WireFrame
 
-![Screenshot](screenshots/Project-3-Wireframe.png "wireframe")
+[Screenshot](https://git.generalassemb.ly/clayGue69/project-3/blob/master/Project-3-Wireframe.png?raw=true)
 
 Project 3 ERD
 

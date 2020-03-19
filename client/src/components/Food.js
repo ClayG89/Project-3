@@ -38,7 +38,7 @@ export default class Food extends Component {
                     <input type="text" name="name" onChange={ this.props.changeInputFood }/>
                     {/* <p>{this.submitCreateForm}</p> */}
                 </div>
-                <div>
+                <div className="input">
                     <h3>Count</h3>
                     <input type="number" name="count" onChange={ this.props.changeInputFood  }/>
                 </div>

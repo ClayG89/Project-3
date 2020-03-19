@@ -19,16 +19,8 @@ If you are starting a new project do the following:
 If you want to start a project without using this template directory do the
 following:
 
+Project 3 WireFrame
 
-1. `mkdir <project-name>`
-1. `cd <project-name>`
-1. `echo "# <project-name>" > readme.md`
-1. `git init`
-1. `git add readme.md `
-1. `git commit -m "init repo with readme.md"`
-1. `npm init`
-1. `mkdir models views controllers`
-1. `touch ./server.js`
 <div style="width: 640px; height: 480px; margin: 10px; position: relative;">
 <iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://www.lucidchart.com/documents/embeddedchart/923176f1-1cc5-42bf-b51b-596d6d1224a0" id="MlTHsPpLf2ua">
 </iframe></div>

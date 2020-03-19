@@ -6,7 +6,9 @@ Problem Statement
 
 Inventory and personnel data is not readily available at Clay's. Everything is tracked with hand-written ledgers, leading to mistakes and poor management. This site will assist management in organizing and manipulating the data effecively.
 
+TRELLO
 
+https://trello.com/b/6aqd6ELr/project-3
 
 # Setup A New Project Without This Template
 

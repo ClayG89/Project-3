@@ -24,12 +24,12 @@ export default class Vacation extends Component {
 
         return (
             <div>
-                <Title/>
+                 <h1>Clay's Country Cookin</h1>
 
                 <div className="vacaName">
                     <h2>Vacation</h2>
                     <h3>Name</h3>
-                    <Table info={this.state.vacation}/>
+                    <Table info={this.props.vacation}/>
                     <input type="text" name="name" onChange={ this.submitCreateForm }/>
                     <p>{this.submitCreateForm}</p>
                 </div>

@@ -30,25 +30,28 @@ export default class Benefit extends Component {
        
     return (
         <div>
-            <Title/>
+            <h1>Clay's Country Cookin</h1>
 
             <div className="benefitName">
                 <h2>Benefits</h2>
                 <h3>Name</h3>
-                <Table info={this.state.benefit}/>
-                <input type="text" name="name" onChange={ this.submitCreateForm }/>
-                <p>{this.submitCreateForm}</p>
+                <Table info={this.props.benefit}/>
+                <input type="text" name="name" onChange={ this.props.changeInputBenefit }/>
+                {/* <p>{this.submitCreateForm}</p> */}
             </div>
             <div>
                 <h3>Count</h3>
-                <input type="number" name="count" onChange={ this.changeInput }/>
+                <input type="number" name="count" onChange={ this.props.changeInputBenefit  }/>
             </div>
             <div>
                 <h3>Description</h3>
-                <input type="text" name="description" onChange={ this.changeInput}/>
+                <input type="text" name="description" onChange={ this.props.changeInputBenefit }/>
             </div>
             <div>
-            <button onClick={ this.submitNewProduct }>EDIT</button>
+                <button onClick={ this.props.submitCreateBenefit }>Add New</button>
+            </div>
+            <div>
+                <button onClick={ this.props.changeInputBenefit }>Edit</button>
             </div>
 
                        

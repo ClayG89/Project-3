@@ -47,7 +47,7 @@ export default class Food extends Component {
                     <input type="text" name="description" onChange={ this.props.changeInputFood }/>
                 </div>
                 <div>
-                <button onClick={ this.props.submitCreateFood }>Add New</button>
+                    <button onClick={ this.props.submitCreateFood }>Add New</button>
                 </div>
                 <div>
                     <button onClick={ this.props.changeInputFood }>Edit</button>

@@ -1,18 +1,12 @@
-# mern-template-project
+Project 3
 
-# Setup A New Project From This Template
+Clay's Country Cookin
 
-If you are starting a new project do the following:
+Problem Statement
 
-1. copy/download this directory to where you new project is located and rename
-   it to the name of your project.
-1. change your directory (`cd`) into the copied project template
-1. `npm install`
-1. `npm run dev`
-1. Open a new browser window and navigate to the URL http://localhost:3000/
-    here you should see `hello world` displayed after page load
-    updates should show up here automatically
-1. see the `client/src` `readme.md` file for more information on the react project
+Inventory and personnel data is not readily available at Clay's. Everything is tracked with hand-written ledgers, leading to mistakes and poor management. This site will assist management in organizing and manipulating the data effecively.
+
+
 
 # Setup A New Project Without This Template
 

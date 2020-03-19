@@ -16,9 +16,9 @@ export default class Table extends Component {
                    {/* {this.props.info.map((info) => {
                        return ( */}
                            <tr>
-                            <td>{this.props.name}</td>
-                            <td>{this.props.count}</td>
-                            <td>{this.props.description}</td>    
+                            <td>{this.props.info.name}</td>
+                            <td>{this.props.info.count}</td>
+                            <td>{this.props.info.description}</td>    
                            </tr>
                    {/* ) */}
                        

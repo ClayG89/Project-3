@@ -11,11 +11,11 @@ export default class Inventory extends Component {
             cleaning: [],
             misc:[]
       }
-
       
 getFoods = () => {
     axios.get('/api/food').then((response) => {
         const foundFood = response.data;
+        console.log("THIS IS FOUND FOOD" + foundFood)
         this.setState({
     food: foundFood
         })
@@ -24,6 +24,7 @@ getFoods = () => {
 getCleaning = () => {
     axios.get('/api/cleaning').then((response) => {
         const foundCleaning= response.data;
+        console.log("THIS IS FOUND CLEANING" + response.data)
         this.setState({
     cleaning: foundCleaning
         })
@@ -117,13 +118,14 @@ componentDidMount() {
                 <div>
                 <Link to="/cleaning">Cleaning</Link>
                 {
-                    this.state.food.map((cleaning, i) => {
-                        return (
-                        <Cleaning cleaning={ cleaning } key={ i }
-                        submitCreateCleaning={this.submitCreateCleaning}
-                        changeInputCleaning={this.changeInputCleaning}/>
+                    this.state.cleaning.map((cleaning, i) => {
+                         return (
+                          <Cleaning cleaning={ cleaning } key={ i }
+                          submitCreateCleaning={this.submitCreateCleaning}
+                          changeInputCleaning={this.changeInputCleaning}/>
 
                         )
+                       
                     })
                 }
                 </div>
@@ -131,8 +133,13 @@ componentDidMount() {
                 <Link to="/misc">Misc</Link>
                 {
                     this.state.misc.map((misc, i) => {
-                        return <Misc misc={ misc } key={ i }/>;
-                        
+                         return (
+                          <Misc misc={ misc } key={ i }
+                          submitCreateMisc={this.submitCreateMisc}
+                          changeInputMisc={this.changeInputMisc}/>
+
+                        )
+                       
                     })
                 }
                 </div>

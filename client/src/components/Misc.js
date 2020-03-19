@@ -22,27 +22,29 @@ export default class Misc extends Component {
     render() {
         return (
             <div>
-                <Title/>
+                <h1>Clay's Country Cookin</h1>
 
-<div className="cleanerName">
-    <h2>Miscellaneous</h2>
-    <h3>Name</h3>
-    <Table info={this.state.misc}/>
-    <input type="text" name="name" onChange={ this.submitCreateForm }/>
-    <p>{this.submitCreateForm}</p>
-</div>
-<div>
-    <h3>Count</h3>
-    <input type="number" name="count" onChange={ this.changeInput }/>
-</div>
-<div>
-    <h3>Description</h3>
-    <input type="text" name="description" onChange={ this.changeInput}/>
-</div>
-<div>
-<button onClick={ this.submitNewProduct }>EDIT</button>
-</div>
-
+                <div className="cleanerName">
+                <h2>Miscellaneous</h2>
+                <h3>Name</h3>
+                <Table info={this.props.misc}/>
+                <input type="text" name="name" onChange={ this.props.changeInputMisc }/>
+                {/* <p>{this.submitCreateForm}</p> */}
+            </div>
+            <div>
+                <h3>Count</h3>
+                <input type="number" name="count" onChange={ this.props.changeInputMisc }/>
+            </div>
+            <div>
+                <h3>Description</h3>
+                <input type="text" name="description" onChange={ this.props.changeInputMisc}/>
+            </div>
+            <div>
+                <button onClick={ this.props.submitCreateMisc }>Add New</button>
+            </div>
+            <div>
+                <button onClick={ this.props.changeInputMisc }>Edit</button>
+            </div>
            
 </div>
 )

@@ -32,13 +32,14 @@ export default class Cleaning extends Component {
                 <div className="cleanerName">
                     <h2>Cleaning</h2>
                     <h3>Name</h3>
+                    {/* <p>THIS NEEDS A DELETE! {this.props.cleaning.name}</p> */}
                     <Table info={this.props.cleaning}/>
                     <input type="text" name="name" onChange={ this.props.changeInputCleaning }/>
                     {/* <p>{this.submitCreateForm}</p> */}
                 </div>
                 <div>
                     <h3>Count</h3>
-                    <input type="number" name="count" onChange={ this.props.changeInputFood }/>
+                    <input type="number" name="count" onChange={ this.props.changeInputCleaning}/>
                 </div>
                 <div>
                     <h3>Description</h3>

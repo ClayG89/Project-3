@@ -35,7 +35,7 @@ export default class Food extends Component {
                     <h2>Food</h2>
                     <h3>Name</h3>
                     <Table info={this.props.food}/>
-                    <input type="text" name="name" onChange={ this.props.changeInputFood  }/>
+                    <input type="text" name="name" onChange={ this.props.changeInputFood }/>
                     {/* <p>{this.submitCreateForm}</p> */}
                 </div>
                 <div>

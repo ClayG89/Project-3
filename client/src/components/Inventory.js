@@ -100,7 +100,6 @@ componentDidMount() {
             <div>
                 <h1>Clay's Country Cookin</h1>
                 <h2>Inventory</h2>
-
                 <div>
                     <Link to="/food">Food</Link>
                 {

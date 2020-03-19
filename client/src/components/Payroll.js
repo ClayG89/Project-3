@@ -25,13 +25,13 @@ export default class Payroll extends Component {
 
         return (
             <div>
-                <Title/>
+                <h1>Clay's Country Cookin</h1>
 
                 <div className="payrollName">
                     <h2>Payroll</h2>
                     <h3>Name</h3>
-                    <Table info={this.state.payroll}/>
-                    <input type="text" name="name" onChange={ this.submitCreateForm }/>
+                    <Table info={this.props.payroll}/>
+                    <input type="text" name="name" onChange={ this.props.changeInputPayroll }/>
                     <p>{this.submitCreateForm}</p>
                 </div>
                 <div>

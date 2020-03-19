@@ -41,42 +41,42 @@ toggleCreateForm = () => {
         showCreateForm: newShowCreateForm,
     });
 }
-changeInput = (event) => {
+changeInputPayroll = (event) => {
     const updatedNewPayroll = { ...this.state.newPayroll};
     updatedNewPayroll[event.target.name] = event.target.value;
     this.setState({
         newPayroll: updatedNewPayroll,
     });
 }
-changeInput = (event) => {
+changeInputVacation = (event) => {
     const updatedNewVacation = { ...this.state.newVacation};
     updatedNewVacation[event.target.name] = event.target.value;
     this.setState({
         newVacation: updatedNewVacation,
     });
 }
-changeInput = (event) => {
+changeInputBenefit = (event) => {
     const updatedNewBenefits = { ...this.state.newBenefits};
     updatedNewBenefits[event.target.name] = event.target.value;
     this.setState({
         newBenefits: updatedNewBenefits,
     });
 }
-submitCreateForm = (event) => {
+submitCreatePayroll = (event) => {
     event.preventDefault();
     axios.post('/api/payroll', this.state.newPayroll).then(() => {
         this.toggleCreateForm();
         this.getPayroll();
     });
 }
-submitCreateForm = (event) => {
+submitCreateVacation = (event) => {
     event.preventDefault();
     axios.post('/api/vacation', this.state.newVacation).then(() => {
         this.toggleCreateForm();
         this.getVacation();
     });
 }
-submitCreateForm = (event) => {
+submitCreateBenefit = (event) => {
     event.preventDefault();
     axios.post('/api/benefit', this.state.newBenefits).then(() => {
         this.toggleCreateForm();
@@ -100,17 +100,25 @@ componentDidMount() {
                 <Link to="/payroll">Payroll</Link>
                 {
                     this.state.payroll.map((payroll, i) => {
-                        return <Payroll payroll={ payroll } key={ i }/>;
-                        
+                        return (
+                        <Payroll payroll={ payroll } key={ i }
+                        submitCreatePayroll={this.submitCreatePayroll}
+                        changeInputPayroll={this.changeInputPayroll}/>
+
+                        )
                     })
                 }
                 </div>
                 <div>
                 <Link to="/Vacation">Vacation</Link>
                 {
-                    this.state.vacation.map((vacation, i) => {
-                        return <Vacation vacation={ vacation } key={ i }/>;
-                        
+                    this.state.Vacation.map((vacation, i) => {
+                        return (
+                        <Vacation vacation={ vacation } key={ i }
+                        submitCreateVacation={this.submitCreateVacation}
+                        changeInputVacation={this.changeInputVacation}/>
+
+                        )
                     })
                 }
                 </div>
@@ -118,8 +126,12 @@ componentDidMount() {
                 <Link to="/benefit">Benefits</Link>
                 {
                     this.state.benefit.map((benefit, i) => {
-                        return <Benefit benefit={ benefit } key={ i }/>;
-                        
+                        return (
+                        <Benefit benefit={ benefit } key={ i }
+                        submitCreateBenefit={this.submitCreateBenefit}
+                        changeInputBenefit={this.changeInputBenefit}/>
+
+                        )
                     })
                 }
                 </div>

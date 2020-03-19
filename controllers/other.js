@@ -1,6 +1,6 @@
 const express = require('express')
 
-const { Utility } = require('../models/Other')
+const { Utility } = require('../models/other')
 
 
 const utilityRouter = express.Router()

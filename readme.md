@@ -16,10 +16,7 @@ https://dashboard.heroku.com/apps/claysproject3
 
 Project 3 WireFrame
 
-<div style="width: 640px; height: 480px; margin: 10px; position: relative;">
-<iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://www.lucidchart.com/documents/embeddedchart/923176f1-1cc5-42bf-b51b-596d6d1224a0" id="MlTHsPpLf2ua">
-</iframe>
-</div>
+Screen Shot 2020-03-19 at 12.31.55 PM (2)
 
 Project 3 ERD
 

@@ -86,6 +86,16 @@ submitCreateMisc = (event) => {
         this.getMiscs();
     });
 }
+DeleteFood = () => {
+    const foodId = this.props.match.params.foodId;
+    axios.delete('/api/food' + foodId).then(() => {
+        this.setState({
+            redirectToFoods: true
+        })
+    })
+}
+
+
 componentDidMount() {
     this.getFoods()
     this.getCleaning()
@@ -107,8 +117,8 @@ componentDidMount() {
                         return (
                         <Food food={ food } key={ i }
                         submitCreateFood={this.submitCreateFood}
+                        DeleteFood={this.DeleteFood}
                         changeInputFood={this.changeInputFood}/>
-
                         )
                     })
                 }

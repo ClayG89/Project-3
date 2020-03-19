@@ -52,6 +52,9 @@ export default class Food extends Component {
                 <div>
                     <button onClick={ this.props.changeInputFood }>Edit</button>
                 </div>
+                <div>
+                    <button onClick={ this.props.deleteFood }>Delete</button>
+                </div>
 
                            
             </div>

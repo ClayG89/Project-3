@@ -16,7 +16,7 @@ https://dashboard.heroku.com/apps/claysproject3
 
 Project 3 WireFrame
 
-Screen Shot 2020-03-19 at 12.31.55 PM (2)
+![alt text](screenshots/Project-3-Wireframe.png "wireframe")
 
 Project 3 ERD
 

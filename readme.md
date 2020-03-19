@@ -12,7 +12,7 @@ https://trello.com/b/6aqd6ELr/project-3
 
 HEROKU
 
-https://dashboard.heroku.com/apps/claysproject3
+https://claysproject3.herokuapp.com/
 
 Project 3 WireFrame
 

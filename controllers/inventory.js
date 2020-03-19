@@ -1,6 +1,6 @@
 const express = require('express')
 
-const { Food } = require('../models/inventory')
+const { Food } = require('../models/Inventory')
 
 
 const foodRouter = express.Router()

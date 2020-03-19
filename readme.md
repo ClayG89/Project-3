@@ -20,7 +20,3 @@ Project 3 WireFrame
 
 Project 3 ERD
 
-<div style="width: 640px; height: 480px; margin: 10px; position: relative;">
-<iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://www.lucidchart.com/documents/embeddedchart/b228e886-2320-4b4c-85a4-e62b8d04658a" id="4q2Hv6SQgfOR">
-</iframe>
-</div>
